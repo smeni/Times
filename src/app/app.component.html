@@ -1,4 +1,4 @@
-<!-- <div class="dropDown">
+<div class="dropDown">
     <mat-form-field>
         <mat-label>Select</mat-label>
         <mat-select [(ngModel)]="selectedCity">
@@ -6,17 +6,7 @@
             <mat-option *ngFor="let clock of clocks" [value]="clock.cityId">{{clock.cityId}}</mat-option>
         </mat-select>
     </mat-form-field>
-</div> -->
-
-
-<div class="dropDown">
-      <select [(ngModel)]="selectedCity">
-          <option value="0">כל השעונים</option>
-          <option *ngFor="let clock of clocks" [value]="clock.cityId">{{clock.cityId}}</option>
-      </select>
 </div>
-
-
 
 
 <div class="flex-container">
