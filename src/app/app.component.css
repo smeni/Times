@@ -1,0 +1,87 @@
+.flex-container {
+    display: flex;
+    direction: rtl;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+
+/* Medium screens */
+
+@media all and (max-width: 800px) {
+    .flex-container {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
+        justify-content: space-around;
+    }
+}
+
+
+/* Small screens */
+
+@media all and (max-width: 500px) {
+    .flex-container {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+.example-card {
+    max-width: 400px;
+    height: 300px;
+}
+
+.analog-clock {
+    position: relative;
+    margin: 100px auto 0;
+    margin-top: 0;
+    width: 200px;
+    height: 200px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    transform-origin: 100% 100%;
+}
+
+.hour {
+    background-color: #f44336;
+}
+
+.minute {
+    background-color: #3f51b5;
+}
+
+.second {
+    background-color: #9e9e9e;
+}
+
+.center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.digital-clock {
+    position: absolute;
+    /* top: 350px; */
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    font-size: 2em;
+    font-family: "Source Code Pro", monospace;
+}
+
+.dropDown {
+    display: flex;
+    flex-direction: row-reverse;
+}
