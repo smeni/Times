@@ -4,7 +4,7 @@
     display: flex;
     direction: rtl;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 
