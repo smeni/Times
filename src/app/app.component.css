@@ -1,8 +1,10 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 .flex-container {
     display: flex;
     direction: rtl;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 
@@ -84,4 +86,6 @@
 .dropDown {
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 100px;
 }
+

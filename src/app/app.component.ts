@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { animateAnalogClock, cities, clock, Times } from 'src/helper/dto';
-import { TimesService } from 'src/services/times.service';
+import { animateAnalogClock, cities, clock, Times } from '../helper/dto';
+import { TimesService } from '../services/times.service';
 
 @Component({
   selector: 'app-root',

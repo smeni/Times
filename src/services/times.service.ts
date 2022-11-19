@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { clock } from 'src/helper/dto';
+import { clock } from '../helper/dto';
 
 @Injectable({
   providedIn: 'root',

@@ -10,7 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { Selectfilter } from 'src/helper/selectFilter';
+import { Selectfilter } from '../helper/selectFilter';
 
 @NgModule({
   declarations: [AppComponent, Selectfilter],
