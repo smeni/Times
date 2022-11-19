@@ -1,28 +1,41 @@
 <div class="dropDown">
-    <mat-form-field>
-        <mat-label>Select</mat-label>
-        <mat-select [(ngModel)]="selectedCity">
-            <mat-option value="0">כל השעונים</mat-option>
-            <mat-option *ngFor="let clock of clocks" [value]="clock.cityId">{{clock.cityId}}</mat-option>
-        </mat-select>
-    </mat-form-field>
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select [(ngModel)]="selectedCity">
+      <mat-option value="0">כל השעונים</mat-option>
+      <mat-option *ngFor="let clock of clocks" [value]="clock.cityId">{{getCityName(clock.cityId!)}}</mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>
 
-
 <div class="flex-container">
-    <mat-card class="example-card item" *ngFor="let clock of clocks | selectfilter:selectedCity">
+  <mat-card
+    class="example-card item"
+    *ngFor="let clock of clocks | selectfilter: selectedCity"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ getCityName(clock.cityId!) }}</mat-card-title>
+    </mat-card-header>
 
-        <mat-card-header>
-            <mat-card-title>{{getCityName(clock.cityId!)}}</mat-card-title>
-        </mat-card-header>
-
-        <div class="analog-clock">
-            <div class="hour hand" [ngStyle]="animateAnalogClock(clock.times!).hourHandStyle"></div>
-            <div class="minute hand" [ngStyle]="animateAnalogClock(clock.times!).minuteHandStyle"></div>
-            <div class="second hand" [ngStyle]="animateAnalogClock(clock.times!).secondHandStyle"></div>
-            <div class="center-circle"></div>
-        </div>
-        <div class="digital-clock">{{format(clock.times!.hour)}}:{{format(clock.times!.minute)}}:{{format(clock.times!.second)}}</div>
-
-    </mat-card>
+    <div class="analog-clock">
+      <div
+        class="hour hand"
+        [ngStyle]="animateAnalogClock(clock.times!).hourHandStyle"
+      ></div>
+      <div
+        class="minute hand"
+        [ngStyle]="animateAnalogClock(clock.times!).minuteHandStyle"
+      ></div>
+      <div
+        class="second hand"
+        [ngStyle]="animateAnalogClock(clock.times!).secondHandStyle"
+      ></div>
+      <div class="center-circle"></div>
+    </div>
+    <div class="digital-clock">
+      {{ format(clock.times!.hour) }}:{{ format(clock.times!.minute) }}:{{
+        format(clock.times!.second)
+      }}
+    </div>
+  </mat-card>
 </div>
